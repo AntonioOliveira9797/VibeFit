@@ -13,6 +13,24 @@
         android:theme="@style/Theme.VibeFit"
         tools:targetApi="31">
         <activity
+            android:name=".ProfAddTreino"
+            android:exported="false" />
+        <activity
+            android:name=".EsqueciSenha"
+            android:exported="false" />
+        <activity
+            android:name=".TelaTeste"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".TelaAlunoPerfil"
+            android:exported="false" />
+        <activity
+            android:name=".TelaInicioAluno"
+            android:exported="false" />
+        <activity
             android:name=".TelaCadastro3"
             android:exported="false" />
         <activity

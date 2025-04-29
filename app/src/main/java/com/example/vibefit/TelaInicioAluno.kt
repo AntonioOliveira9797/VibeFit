@@ -8,31 +8,26 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-
-class TelaCadastro3 : AppCompatActivity() {
-    lateinit var btnFinalizarCadastro: Button
-    lateinit var btnFechar3: Button
+class TelaInicioAluno : AppCompatActivity() {
+    lateinit var btnPerfilAluno: Button
+    lateinit var btnSairContaAluno: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_tela_cadastro3)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.Cadastro3)) { v, insets ->
+        setContentView(R.layout.activity_tela_inicio_aluno)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.TelaAlunoInicio)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        btnFechar3 = findViewById(R.id.btnFechar3)
-        btnFechar3.setOnClickListener {
+        btnSairContaAluno = findViewById(R.id.btnSairContaAluno)
+        btnSairContaAluno.setOnClickListener {
             finish()
         }
-        btnFinalizarCadastro = findViewById(R.id.btnFinalizarCadastro)
-        btnFinalizarCadastro.setOnClickListener {
-            val intent = Intent(this@TelaCadastro3, MainActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+        btnPerfilAluno = findViewById(R.id.btnPerfilAluno)
+        btnPerfilAluno.setOnClickListener {
+            val intent = Intent(this, TelaAlunoPerfil::class.java)
             startActivity(intent)
-            finish() //
         }
-
     }
 }
